@@ -1,0 +1,25 @@
+# Dependencies, builds and test output
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+
+# Local backups
+backup/
