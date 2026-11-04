@@ -1,37 +1,37 @@
-# UNELAPSED — Orientations et pistes
+# UNELAPSED — Direction and ideas
 
-Les règles jouables sont dans [INITIAL_STATE.md](INITIAL_STATE.md) ; le code et les tests décrivent leur implémentation. Ce fichier conserve les principes et les idées à venir.
+Current gameplay rules are in [INITIAL_STATE.md](INITIAL_STATE.md); code and tests describe their implementation. This file records design principles and future ideas.
 
-## Principes
+## Principles
 
-- RPG de survie économique inspiré de Time Out, avec son propre univers.
-- Le temps est la vie et la monnaie : départ à une heure, mort à zéro, réserve sans maximum.
-- La simulation continue pendant les absences, à partir des timestamps.
-- Peu d’options et d’objets, chacun avec une fonction distincte. Éviter les quiz et mini-jeux génériques.
-- Le joueur découvre ses investissements : coûts, durées et effets explicites, sans ordre d’achat imposé.
-- La progression ouvre des revenus plus rentables ; le départ doit rester exigeant.
-- Une seule tâche active au départ. Les achats restent indépendants des tâches.
-- Interface anglaise, sobre, peu de texte, timer dominant, couleurs discrètes et thèmes sombre/clair.
+- An economic survival RPG inspired by In Time, with its own setting.
+- Time is life and currency: start with one hour, die at zero, and accumulate an unlimited reserve.
+- Timestamp-based simulation continues while the player is away.
+- Keep options and items few, each with a distinct purpose. Avoid generic quizzes and minigames.
+- Let players discover their investments through explicit costs, durations and effects, without a prescribed purchase order.
+- Progression unlocks more profitable income; the beginning should remain demanding.
+- Only one active task at the start. Purchases remain independent of tasks.
+- English interface, restrained styling, little text, a prominent timer, subtle colors, and dark/light themes.
 
-## À développer
+## Planned
 
-- [ ] Débloquer les files d’attente et routines au cours de la progression ; définir leur coût et leurs conditions.
+- [ ] Unlock action queues and routines through progression; define their costs and requirements.
 
-## Pistes à valider
+## Ideas to validate
 
-- Fabriquer le Tool kit comme alternative à l’achat : recette et durée à définir.
-- Ajouter des métiers ou outils seulement s’ils apportent des choix distincts ; éviter les bonus équivalents et l’usure sans intérêt.
-- Introduire des quartiers aux prix et opportunités différents.
-- Proposer des personnages et quêtes offrant des alternatives économiques.
-- Permettre de survivre à une longue absence : logement, refuge ou réserve à étudier.
-- Ajouter des contraintes prévisibles et évitables, sans multiplier les jauges et pénalités.
-- Évaluer l’intérêt de l’exploration et du combat pour la boucle économique.
-- Décider du maintien des contrôles DEV : Restart, +1h et vitesses ×1 à ×512.
+- Craft the Tool kit as an alternative to buying it; define the recipe and duration.
+- Add jobs or tools only when they create distinct choices; avoid equivalent bonuses and wear without a meaningful purpose.
+- Introduce districts with different prices and opportunities.
+- Add characters and quests offering alternative economic paths.
+- Make long absences survivable: investigate housing, shelter or reserves.
+- Introduce predictable, preventable constraints without multiplying gauges and penalties.
+- Assess whether exploration and combat support the economic loop.
+- Decide whether to keep the DEV controls: Restart, +1h and speeds from ×1 to ×512.
 
-## Contraintes techniques
+## Technical constraints
 
-- Sauvegarde locale liée au navigateur et à l’adresse du jeu ; aucun compte ni serveur.
-- Horloge de l’appareil utilisée ; étudier une horloge serveur pour une éventuelle économie partagée.
-- Préserver la progression lors des migrations de sauvegardes.
-- Restart réinitialise la partie, sans progression permanente.
-- Nom UNELAPSED : recherche de jeu homonyme déjà effectuée ; marque et domaine non vérifiés.
+- Local saves are tied to the browser and game address; there are no accounts or server.
+- Use the device clock; consider a server clock for a potential shared economy.
+- Preserve progress during save migrations.
+- Restart resets the run, with no permanent progression.
+- UNELAPSED name: a search for games with the same name has been performed; trademark and domain availability have not been checked.

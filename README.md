@@ -1,36 +1,36 @@
 # UNELAPSED
 
-RPG de survie en TypeScript et Vite : le temps sert de vie et de monnaie. La simulation continue pendant les absences et la progression est sauvegardée dans le navigateur.
+A survival RPG built with TypeScript and Vite: time is both life and currency. The simulation continues while you are away, and progress is saved in the browser.
 
-## Démarrer
+## Getting started
 
-Node.js 22.18+ ou 24 et npm :
+Requires Node.js 22.18+ or 24 and npm:
 
 ```sh
 npm install
 npm run dev
 ```
 
-Ouvrir l’adresse affichée par Vite, généralement http://127.0.0.1:5173.
+Open the address printed by Vite, usually http://127.0.0.1:5173.
 
-Si le Node.js Homebrew de cette machine ne démarre pas, utiliser celui fourni par Codex :
+If Homebrew's Node.js installation on this machine fails to start, use the runtime provided by Codex:
 
 ```sh
 export PATH="/Users/thibaultchalaoux/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$PATH"
 ```
 
-## Vérifier et compiler
+## Checks and builds
 
-- `npm test` : tests du moteur et des sauvegardes.
-- `npm run check` : vérification TypeScript.
-- `npm run build` : vérification TypeScript et génération de `dist/`.
-- `npm run preview` : prévisualisation du build.
+- `npm test`: game engine and save tests.
+- `npm run check`: TypeScript checks.
+- `npm run build`: TypeScript checks and production output in `dist/`.
+- `npm run preview`: preview the production build.
 
-## Repères
+## Project map
 
-- `src/game.ts` : règles, simulation et migrations des sauvegardes.
-- `src/main.ts` / `src/style.css` : interface et persistance.
-- `src/clock.ts` : horloge et vitesses de test.
-- `src/timer.ts` / `src/notifications.ts` : affichage du temps et notifications.
-- [INITIAL_STATE.md](INITIAL_STATE.md) : règles jouables détaillées.
-- [TASKS.md](TASKS.md) : principes et pistes futures.
+- `src/game.ts`: rules, simulation and save migrations.
+- `src/main.ts` / `src/style.css`: interface and persistence.
+- `src/clock.ts`: simulation clock and test speeds.
+- `src/timer.ts` / `src/notifications.ts`: time formatting and notifications.
+- [INITIAL_STATE.md](INITIAL_STATE.md): detailed gameplay rules.
+- [TASKS.md](TASKS.md): design principles and future ideas.

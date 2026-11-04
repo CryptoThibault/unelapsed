@@ -1,90 +1,90 @@
-# UNELAPSED — Règles actuelles
+# UNELAPSED — Current rules
 
-## Départ et interface
+## Starting state and interface
 
-- Une heure de vie, aucun maximum de réserve ; zéro termine la partie. Le timer devient rouge en dessous de cinq minutes. Au-delà de 24 heures, il affiche jours:heures:minutes:secondes sans unité.
-- Zéro nourriture, 100 Energy, Homeless, métier Warehouse worker.
-- Personnage provisoire : Alex Morgan. Un cadre au-dessus du timer contient son nom, la ligne Work avec son métier, la ligne Status, le temps total écoulé depuis le début (Total time), puis deux sous-cadres Food et Energy. Ce temps suit l’horloge du jeu, absences et accélération comprises, et se fige à la mort.
-- Onglets Action / Inventory / Shop / Recruitment. Inventory montre uniquement les objets possédés, sans timer ; prochain repas dans le profil. La pénalité de repas n'est pas affichée pour le moment.
-- Interface anglaise, peu de texte, thèmes sombre et clair mémorisés.
-- Notifications en bas de l’écran : gains en vert, dépenses et pénalités en rouge, avec montant et motif. Elles disparaissent après 4,5 secondes réelles et peuvent être fermées ; quatre au maximum. Le décompte naturel et les salaires encore en attente restent silencieux. Un gain et une perte simultanés sont affichés séparément. La fin d’une formation affiche une notification verte Training complete avec le nom de la certification obtenue.
+- Start with one hour of life and no reserve cap; zero ends the run. The timer turns red below five minutes. Above 24 hours, it displays days:hours:minutes:seconds without unit labels.
+- Start with no food, 100 Energy, Homeless status and the Warehouse worker job.
+- Temporary character name: Alex Morgan. A single card above the timer contains the name, a Work row with the current job, a Status row, Total time since the start, and separate Food and Energy panels. Total time follows the game clock, including offline time and speed changes, and stops at death.
+- Tabs: Action / Inventory / Shop / Recruitment. Inventory shows only owned items, without timers; the next meal appears in the profile. The missed-meal penalty is not currently displayed.
+- English interface, little text, and persistent dark/light themes.
+- Bottom notifications show gains in green and spending or penalties in red, with an amount and reason. They disappear after 4.5 real seconds and can be dismissed; at most four are visible. Natural countdown and pending wages are silent. Simultaneous gains and losses appear separately. Completing a course shows a green Training complete notification naming the certification.
 
-## Métiers et formation
+## Jobs and training
 
-Work est une activité continue, sans durée imposée ni barre de progression. Le salaire s’accumule au prorata du temps travaillé et reste en attente jusqu’à l’arrêt de la session. La croix arrête le travail et encaisse le salaire ; l’épuisement arrête aussi la session et paie avant de lancer Sleep. Aucun paiement intermédiaire. Le cadre Working affiche la durée écoulée et le salaire en attente.
+Work is continuous, with no fixed duration or progress bar. Wages accrue proportionally to time worked and remain pending until the session ends. The cross stops work and collects pay; exhaustion also ends and pays the session before starting Sleep. There are no intermediate payments. The Working panel shows elapsed time and pending pay.
 
-| Métier | Salaire par minute travaillée | Formation pour l'atteindre | Coût | Durée active de formation |
+| Job | Pay per minute worked | Required course | Course price | Active training duration |
 | --- | --- | --- | --- | --- |
-| Warehouse worker | 3 min | Accessible au départ | — | — |
+| Warehouse worker | 3 min | Available at the start | — | — |
 | Machine operator | 4 min | Machine operation | 10 min | 30 min |
 | Maintenance technician | 6 min | Technical maintenance | 1 h | 30 min |
 | Production supervisor | 8 min | Production management | 4 h | 30 min |
 
-- Aucune formation possédée au départ. Les trois s’achètent au Shop, sans prérequis de métier : on peut sauter des étapes. Un seul achat par formation.
-- Une seule action Training avec un sélecteur des formations achetées et non terminées. Les formations possédées apparaissent aussi dans Inventory, marquées Qualified une fois terminées.
-- Recruitment affiche les quatre métiers, leurs revenus et coûts d’énergie par minute et leurs prérequis de certification et d’équipement. Aucune mention From full rest. Le joueur choisit explicitement son métier ; acheter ou terminer une formation ne change jamais le poste automatiquement. Le poste initial reste accessible sans prérequis. Changer de métier est gratuit et interdit pendant une session Work.
-- Safety gear : 10 minutes, pour Machine operator. Tool kit : 1 heure, pour Maintenance technician. Professional outfit : 4 heures, pour Production supervisor. Prix provisoires.
-- Les achats uniques possédés (formations, équipements, logement) disparaissent du Shop, et réapparaissent après Restart. Food et Rent home restent renouvelables ; la location est masquée si le logement est possédé. Les équipements sont sans usure et visibles uniquement si possédés dans Inventory. Achat possible avant ou après la formation, y compris pendant une tâche ; un travail engagé conserve son salaire initial.
-- Le paiement est fait uniquement à l’achat au Shop ; démarrer ou reprendre le suivi ne coûte rien de plus. La croix du cadre de formation met en pause et conserve la progression ; un nouveau clic sur la même action Training (marquée Resume) reprend le temps restant sans paiement supplémentaire, même après rechargement ou absence.
-- Chaque formation conserve sa propre progression payée. Pendant une pause, il est possible de travailler, dormir ou suivre une autre formation. Aucune progression tant que la formation n’est pas reprise.
-- À zéro énergie, une formation active conserve sa progression pendant le sommeil, puis reprend automatiquement sans nouveau paiement. Après un sommeil automatique, la formation reprend au réveil avec sa progression conservée.
-- La croix sur une formation active conserve sa progression en pause. Sur Work, elle termine la session et verse le gain accumulé.
-- Une seule tâche active : pas de file d'attente ni de routine au départ. Les achats restent possibles pendant les tâches.
+- No courses are owned initially. All three are available in the Shop without job prerequisites, allowing players to skip steps. Each course can be purchased once.
+- A single Training action lets players select purchased, unfinished courses. Owned courses also appear in Inventory, marked Qualified when completed.
+- Recruitment lists all four jobs, their income and energy cost per minute, and their certification and equipment requirements. It does not display From full rest. Players explicitly choose their job; buying or completing a course never changes it automatically. The starting job remains available without prerequisites. Switching jobs is free and blocked during Work.
+- Safety gear costs 10 minutes for Machine operator. Tool kit costs one hour for Maintenance technician. Professional outfit costs four hours for Production supervisor. Prices are provisional.
+- Owned unique purchases (courses, equipment and a home) disappear from the Shop and return after Restart. Food and Rent home remain repeatable; renting is hidden when a home is owned. Equipment does not wear out and appears in Inventory only when owned. It can be bought before or after training, including during a task; an ongoing work session retains its original pay rate.
+- Payment occurs only when buying a course in the Shop; starting or resuming study costs nothing extra. The training panel's cross pauses study and preserves progress. Clicking the same Training action, marked Resume, continues the remaining duration without another charge, including after reloading or being away.
+- Each course keeps its own paid progress. While one is paused, players can work, sleep or study another course. Paused training makes no progress.
+- At zero energy, active training keeps its progress during sleep and automatically resumes on waking without another charge.
+- The cross pauses active training. During Work, it ends the session and pays the accrued wages.
+- Only one task can be active. Action queues and routines are unavailable initially. Purchases remain possible during tasks.
 
-## Nourriture
+## Food
 
-- Buy food : deux minutes par repas. Quantité entière positive choisie dans le Shop (une par défaut) ; coût total et durée de couverture actualisés avant achat. Les stocks se cumulent et un repas est consommé toutes les quinze minutes. Le coût doit laisser un solde strictement positif.
-- Si aucun repas n'est disponible à l'échéance, retrait immédiat de trente minutes. Aucun multiplicateur du compteur.
-- Acheter ou recharger ne décale pas le prochain repas. Consommation pendant les tâches, le sommeil et les absences.
+- Buy food costs two minutes per meal. Players select a positive whole quantity in the Shop (one by default); total cost and coverage update before purchase. Stocks accumulate, and one meal is consumed every fifteen minutes. Purchases must leave a strictly positive balance.
+- If no meal is available when due, immediately deduct thirty minutes. There is no countdown multiplier.
+- Buying food or reloading does not postpone the next meal. Consumption continues during tasks, sleep and absences.
 
-Food dispenser : objet unique à 3 jours du timer, actif dès l’achat et visible dans Inventory. Il disparaît du Shop une fois possédé. À chaque repas dû sans stock, il achète et consomme un repas à 2 minutes, y compris pendant le sommeil et les absences. Le stock existant est consommé en priorité. Si le paiement ne laisse pas de temps positif, la pénalité de repas manqué s’applique. Restart retire l’objet.
+Food dispenser is a unique item costing three timer days, active immediately after purchase and visible in Inventory. It disappears from the Shop when owned. Whenever a meal is due with no stock, it buys and consumes one meal for two minutes, including during sleep and absences. Existing stock is used first. If payment would not leave a positive time balance, the missed-meal penalty applies. Restart removes the item.
 
-## Energy et sommeil
+## Energy and sleep
 
-- Energy : 100 points maximum, affichés sur 100 sans symbole %. Les sauvegardes conservent leur énergie actuelle. Les taux choisis sont utilisés exactement dans les calculs et affichés par minute du timer.
-- Consommation passive : 2,5 energy/min, soit 40 minutes du timer (16 heures du personnage) pour dépenser 100 points.
-- Consommation totale pendant Work, passif inclus : Warehouse worker 2,9 ; Machine operator 2,8 ; Maintenance technician 2,7 ; Production supervisor 2,6 energy/min. Le passif n’est pas ajouté une seconde fois.
-- Training consomme exactement 2,8 energy/min, passif inclus. Une formation de 30 minutes actives coûte donc 84 points et laisse 16 points si elle commence à 100.
-- Le logement agit uniquement sur la récupération pendant Sleep. Le gain est affiché par minute du timer : +4 energy/min sans logement, +5 energy/min avec location ou propriété.
-- Le profil affiche Energy sur 100, la consommation ou récupération en cours par minute du timer sans ligne Sleep recovery. Le temps nécessaire pour retrouver 100 d’énergie est visible dans l’action Sleep. Work, Training, Sleep et Recruitment indiquent directement leurs coûts ou gains d’énergie par minute du timer ; l’indication From full rest est retirée. Le profil affiche Exhausted in, un décompte basé sur l’énergie actuelle et la consommation de l’activité en cours, masqué pendant Sleep et après la mort.
-- À zéro, sommeil automatique, puis reprise de Work ou Training si cette activité a été interrompue par l’épuisement. Sleep permet aussi de dormir volontairement hors tâche active, sans activité à reprendre.
-- Échelle du personnage : une heure du timer correspond à une journée.
-- Récupération continue : de 0 à 100 en 25 minutes sans logement, ou 20 minutes avec location ou propriété (8 heures pour le personnage). Durée proportionnelle au repos manquant, arrêt à 100 %. L’action Sleep affiche le temps nécessaire pour atteindre 100, mis à jour avec l’énergie et le logement ; à 100, il affiche 00:00.
-- Wake up conserve l’énergie déjà récupérée et annule la reprise automatique prévue ; une formation reste disponible en pause. Le compteur de vie et les repas continuent.
-- Un travail arrêté par épuisement verse le gain accumulé une seule fois avant le sommeil. Au réveil à 100 d’énergie, une nouvelle session Work démarre automatiquement. Le salaire de la session précédente n’est pas versé une seconde fois. Cette reprise reste active après rechargement et pendant les absences.
-- Les taux horaires suivent l’horloge du jeu : à vitesse ×1, une heure correspond à une heure réelle ; les vitesses de test accélèrent tout ensemble.
+- Energy has a maximum of 100 points, displayed out of 100 without a % symbol. Saves retain their current energy. The selected rates are used exactly in calculations and displayed per timer minute.
+- Passive consumption is 2.5 energy/min: 40 timer minutes (16 character hours) to spend 100 points.
+- Total consumption during Work, including passive use: Warehouse worker 2.9, Machine operator 2.8, Maintenance technician 2.7, Production supervisor 2.6 energy/min. Passive use is not added again.
+- Training consumes exactly 2.8 energy/min, including passive use. A 30-minute course therefore costs 84 points and leaves 16 if started at 100.
+- Housing affects only recovery during Sleep. Display recovery per timer minute: +4 energy/min without housing, +5 energy/min with a rental or owned home.
+- The profile shows Energy out of 100 and the current consumption or recovery per timer minute, without a Sleep recovery row. The Sleep action shows the time needed to reach 100 energy. Work, Training, Sleep and Recruitment directly state their energy costs or gains per timer minute; From full rest is not shown. The profile's Exhausted in countdown uses current energy and activity consumption and is hidden during Sleep and after death.
+- At zero energy, automatically sleep, then resume Work or Training if exhaustion interrupted it. Sleep also allows voluntary rest when no task is active, with no task scheduled to resume.
+- Character time scale: one timer hour equals one character day.
+- Recovery is continuous: 0 to 100 takes 25 minutes without housing, or 20 minutes with a rental or owned home (eight character hours). Duration is proportional to missing energy and ends at 100. Sleep shows the time needed to reach 100, updated for energy and housing; at 100 it shows 00:00.
+- Wake up preserves recovered energy and cancels planned automatic resumption; training remains available as paused progress. Life countdown and meals continue.
+- Work ended by exhaustion pays accrued wages once before sleep. At 100 energy, a new Work session starts automatically. The previous session's wages are not paid again. Resumption persists through reloads and absences.
+- Rates follow the game clock: at ×1, one timer hour is one real hour; test speeds accelerate all mechanics together.
 
-## Logement
+## Housing
 
-- Rent home : quatre heures pour 24 heures de location. Renouveler prolonge la durée restante. La récupération complète prend 20 minutes pendant la validité au lieu de 25 ; l'expiration modifie le taux même en plein sommeil et hors ligne.
-- Buy home : douze jours du timer, achat unique ; récupération complète en 20 minutes sans paiement récurrent. Les achats de location ou propriété sont alors désactivés.
-- Status affiche Homeless / Renting / Homeowner ; la durée restante de location est dans le profil, jamais Inventory.
-- Acheter un logement ou une location pendant le sommeil recalcule immédiatement sa durée restante, sans perdre le repos récupéré.
+- Rent home costs four hours for 24 hours of rental. Renewals extend the remaining duration. Full recovery takes 20 minutes while rented, instead of 25; expiry changes recovery even during sleep and offline.
+- Buy home costs twelve timer days, as a unique purchase. Full recovery takes 20 minutes without recurring payments. Renting or buying another home is then disabled.
+- Status shows Homeless / Renting / Homeowner. Remaining rental time appears in the profile, never in Inventory.
+- Buying a home or rental during sleep immediately recalculates its remaining duration without losing recovered energy.
 
-## Temps, sauvegarde et tests
+## Time, saves and testing
 
-- Les calculs reposent sur les timestamps ; les événements hors ligne sont traités chronologiquement. La mort l'emporte sur un salaire ou une qualification simultanés.
-- Les achats doivent laisser un solde strictement positif. Le taux d’un travail commencé reste celui annoncé à son lancement. Le salaire en attente ne protège pas d’une mort avant la fin de session : zéro termine la partie avant tout paiement.
-- Restart remet la partie à son état initial, métiers et formation compris.
-- Les sauvegardes précédentes conservent leur métier, leurs formations actives ou en pause et leur solde. Les équipements correspondant aux métiers déjà acquis sont accordés pour préserver la progression. Les formations déjà payées restent possédées ; leur pourcentage de progression est conservé lors du passage à 30 minutes. Le passage aux taux d’énergie entiers conserve le pourcentage de repos actuel, sans changer la réserve de vie. Les anciennes sessions fixes sont converties en travail continu avec le temps déjà travaillé et le taux actuel du métier.
-- Barre Test speed DEV au-dessus du profil : ×1 / ×2 / ×4 / ×8 / ×16 / ×32 / ×64 / ×128 / ×256 / ×512. Une horloge commune accélère vie, tâches, fatigue, sommeil, repas et location, sans modifier les prix ou salaires.
-- La vitesse reste active après rechargement, hors ligne et après Restart ; elle est synchronisée entre onglets. Le passage d'une vitesse à une autre ne recalcule pas le passé.
-- À ×8, 7,5 secondes réelles comptent pour une minute travaillée ; une formation demande 225 secondes de suivi actif hors sommeil. La barre est provisoire.
-- Boutons DEV Restart et +1h disponibles pour les essais.
+- Calculations use timestamps; offline events are processed chronologically. Death takes priority over simultaneous wages or qualifications.
+- Purchases must leave a strictly positive balance. Work retains the pay rate set at session start. Pending wages cannot prevent death before a session ends: zero ends the run before payment.
+- Restart restores the initial state, including jobs and training.
+- Older saves retain their job, active or paused training, and time balance. Equipment matching previously acquired jobs is granted to preserve progress. Previously purchased courses remain owned; their completion percentage is preserved when converting to 30-minute durations. The migration to integer energy rates preserves the current energy percentage without changing life reserves. Old fixed work sessions become continuous sessions with elapsed work and the job's current rate.
+- Test speed DEV bar above the profile: ×1 / ×2 / ×4 / ×8 / ×16 / ×32 / ×64 / ×128 / ×256 / ×512. A shared clock accelerates life, tasks, energy, sleep, meals and rentals without changing prices or pay rates.
+- Speed persists after reload, while offline and after Restart, and is synchronized between tabs. Changing speed never recalculates the past.
+- At ×8, 7.5 real seconds count as one minute worked; a course takes 225 seconds of active study excluding sleep. The speed bar is temporary.
+- DEV Restart and +1h buttons are available for testing.
 
-## Conversions de temps du personnage
+## Character time conversions
 
-Une heure du timer = une journée de 24 heures pour le personnage. Une minute du timer = 24 minutes du personnage.
+One timer hour equals a 24-hour character day. One timer minute equals 24 character minutes.
 
-| Activité | Énergie / minute du timer affichée | Durée pour 100 points (timer) | Équivalent personnage |
+| Activity | Displayed energy / timer minute | Duration for 100 points (timer) | Character equivalent |
 | --- | ---: | --- | --- |
-| Passif | −2,5 | 40 min | 16 h |
-| Warehouse worker | −2,9 | ≈ 34 min 29 s | ≈ 13 h 48 |
-| Machine operator | −2,8 | ≈ 35 min 43 s | ≈ 14 h 17 |
-| Maintenance technician | −2,7 | ≈ 37 min 02 s | ≈ 14 h 49 |
-| Production supervisor | −2,6 | ≈ 38 min 28 s | ≈ 15 h 23 |
-| Training | −2,8 | ≈ 35 min 43 s | ≈ 14 h 17 |
-| Sleep sans logement | +4 | 25 min | 10 h |
-| Sleep avec logement | +5 | 20 min | 8 h |
+| Passive | −2.5 | 40 min | 16 h |
+| Warehouse worker | −2.9 | ≈ 34 min 29 s | ≈ 13 h 48 min |
+| Machine operator | −2.8 | ≈ 35 min 43 s | ≈ 14 h 17 min |
+| Maintenance technician | −2.7 | ≈ 37 min 02 s | ≈ 14 h 49 min |
+| Production supervisor | −2.6 | ≈ 38 min 28 s | ≈ 15 h 23 min |
+| Training | −2.8 | ≈ 35 min 43 s | ≈ 14 h 17 min |
+| Sleep without housing | +4 | 25 min | 10 h |
+| Sleep with housing | +5 | 20 min | 8 h |
 
-Les taux d’énergie sont exacts ; les durées de conversion du tableau sont arrondies. Une formation de 30 minutes actives représente 12 heures du personnage et coûte 84 d’énergie : elle se termine sans pause si elle commence à 100. Un repas toutes les 15 minutes du timer équivaut à un repas toutes les six heures du personnage, soit quatre par journée.
+Energy rates are exact; conversion durations in the table are rounded. Thirty active training minutes represent twelve character hours and cost 84 energy, so training completes without a break when started at 100. One meal every fifteen timer minutes equals one every six character hours, or four per character day.
